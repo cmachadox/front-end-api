@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script>document.addEventListener('contextmenu', event => event.preventDefault());</script>
+<head>
+    <title>Start Stops RDS</title>
+    <meta charset="UTF-8">
+    <title>Start Stops RDS</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  background="iti.jpeg">
+    <header>
+        <div class="caixa">
+            <h1>Automação para ligar e desligar RDS - Após o uso favor desligar o ambiente</h1>
+        </div>
+    </header>
+
+    <div class="start_rds">
+    <button id="start" value="API-GATEWAY-STOP" onclick="startRequisicao();">LIGAR RDS</button>
+    
+    <div id="resposta"></div>
+
+    <script>
+        function startRequisicao(){
+
+            var start_url = document.getElementById('start').value;
+
+            var start_http = new XMLHttpRequest();
+            start_http.open("GET", start_url, false);
+
+            start_http.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+            document.getElementById("resposta").innerHTML = start_http.responseText;
+        }
+    </script>
+    </div>
+    <h1></h1>
+    
+    <div class="stop_rds">
+    <button id="stop" value="API-GATEWAY-START" onclick="stopRequisicao();">DESLIGAR RDS</button>
+    
+    <div id="resposta2"></div>
+
+    <script>
+        function stopRequisicao(){
+
+            var stop_url = document.getElementById('stop').value;
+
+            var stop_http = new XMLHttpRequest();
+            stop_http.open("GET", stop_url, false);
+
+            stop_http.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+            document.getElementById("resposta2").innerHTML = stop_http.responseText;
+        }
+    </script>
+    </div>
+</body>
+<footer>
+    <img src="iti_02.png">
+    <p class="copyright">&copy; Copyright SRE-ITI - 2022</p>
+</footer>
+</html>

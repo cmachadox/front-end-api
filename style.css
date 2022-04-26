@@ -1,0 +1,94 @@
+
+header {
+    background: #000000;
+    padding: 20px 0;
+}
+
+head {
+    text-transform: uppercase;
+    color: #faf9f9;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.caixa {
+    position: relative;
+    text-align: center;
+    width: 940px;
+    margin: 0 auto;
+    color: white;
+    
+}
+
+.start_rds {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 10px solid #000000;
+    border-radius: 10px;
+    border-color: orange;
+    
+}
+
+.stop_rds {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: 10px solid #000000;
+    border-radius: 10px;
+    border-color: orange;
+}
+
+.start_rds button:hover {
+    border-color: green;
+}
+.start_rds button:active {
+    border-color: red;    
+}
+
+.stop_rds button:hover {
+    border-color: red;
+
+}
+.stop_rds button:active {
+    border-color: green;    
+}
+
+.start_rds button {
+    border-radius: 10px;
+    padding: 10px 0;
+    width: 100px;  
+}
+
+.stop_rds button {
+    border-radius: 10px;   
+    padding: 10px 0;
+    width: 100px;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg");
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
